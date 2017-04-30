@@ -32,20 +32,6 @@ if dein#load_state(s:dein_dir)
   call dein#save_state()
 endif
 
-"if dein#load_state(s:dein_dir)
-"  call dein#begin(s:dein_dir)
-"
-"  " 起動時に読み込むプラグイン群
-"  call dein#add('Shougo/dein.vim')
-"  call dein#add('scrooloose/nerdtree')
-"  call dein#add('tomasr/molokai')
-"  call dein#add('vim-airline/vim-airline')
-"  call dein#add('vim-airline/vim-airline-themes')
-"  call dein#add('tomtom/tcomment_vim')
-"  call dein#end()
-"  call dein#save_state()
-"endif
-
 filetype plugin indent on
 syntax enable
 
@@ -79,7 +65,6 @@ set autoindent
 
 set ruler
 set number
-set list
 set showcmd
 set wildmenu
 
