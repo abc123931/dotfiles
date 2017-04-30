@@ -26,7 +26,6 @@ if dein#load_state(s:dein_dir)
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
   call dein#add('tomtom/tcomment_vim')
-  call dein#add('tomtom/tcomment_vim')
   call dein#end()
   call dein#save_state()
 endif
