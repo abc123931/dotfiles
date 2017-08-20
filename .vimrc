@@ -19,16 +19,32 @@ endif
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
 
+  " dein.toml, dein_layz.tomlファイルのディレクトリをセット
+  let s:toml_dir = expand('~/.vim/rc')
+
   " 起動時に読み込むプラグイン群
-  call dein#add('Shougo/dein.vim')
-  call dein#add('scrooloose/nerdtree')
-  call dein#add('tomasr/molokai')
-  call dein#add('vim-airline/vim-airline')
-  call dein#add('vim-airline/vim-airline-themes')
-  call dein#add('tomtom/tcomment_vim')
+  call dein#load_toml(s:toml_dir . '/dein.toml', {'lazy': 0})
+
+  " 遅延読み込みしたいプラグイン群
+  call dein#load_toml(s:toml_dir . '/dein_lazy.toml', {'lazy': 1})
+
   call dein#end()
   call dein#save_state()
 endif
+
+"if dein#load_state(s:dein_dir)
+"  call dein#begin(s:dein_dir)
+"
+"  " 起動時に読み込むプラグイン群
+"  call dein#add('Shougo/dein.vim')
+"  call dein#add('scrooloose/nerdtree')
+"  call dein#add('tomasr/molokai')
+"  call dein#add('vim-airline/vim-airline')
+"  call dein#add('vim-airline/vim-airline-themes')
+"  call dein#add('tomtom/tcomment_vim')
+"  call dein#end()
+"  call dein#save_state()
+"endif
 
 filetype plugin indent on
 syntax enable
